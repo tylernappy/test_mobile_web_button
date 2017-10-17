@@ -10,6 +10,10 @@ app.get('/:html_file', function(req, res) {
   res.sendFile(path.join(__dirname, 'views', req.params.html_file + '.html'))
 })
 
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, 'views', 'simple_button.html'))
+})
+
 app.listen(port, function() {
   console.log('Listening on port: ' + port)
 })
