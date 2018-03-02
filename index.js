@@ -11,7 +11,7 @@ app.get('/:html_file', function(req, res) {
 })
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, 'views', 'simple_button.html'))
+  res.sendFile(path.join(__dirname, 'views', 'index.html'))
 })
 
 app.listen(port, function() {
