@@ -1,13 +1,43 @@
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-TQM2XZ5');</script>
-<!-- End Google Tag Manager -->
 </head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<br>
+<br>
+
+<div class="row">
+  <div class="col-md-12 text-center">
+    <input type="text" name="link" id="newLink">
+  </div>
+</div>
 
 <br>
-<br>
-<a href="https://r.bttn.io/?btn_ref=org-1fb2a8528f2e1717&btn_url=https%3A%2F%2Fgroupon.co.uk&btn_pub_ref=tt24004testlinkm&btn_fallback_exp=interstitial">Click me!</a>
+
+<div class="row">
+  <div class="col-md-12 text-center">
+    <button type="button" onclick="updateLink()" class="btn btn-primary btn-lg btn-block">Update Link!</button>
+  </div>
+</div>
+
+<div class="col">
+  <div class="col-xs-12 text-center">
+    <a href="#" id="link"></a>
+  </div>
+</div>
+
+<script>
+
+function updateLink() {
+  const link = document.getElementById('link');
+
+  link.href = document.getElementById('newLink').value;
+  link.innerText = document.getElementById('newLink').value;
+
+  return true;
+}
+</script>
+
+<style>
+#newLink {
+
+}
+</style>
