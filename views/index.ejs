@@ -1,0 +1,58 @@
+<head>
+</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<br>
+<br>
+
+<div class="row">
+  <div class="col-md-12 text-center">
+    <input type="text" name="link" id="newLink" size="100" value="<%= url %>" placeholder="https://r.bttn.io">
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-8 offset-md-2 text-center">
+    <button type="button" onclick="updateLink()" class="btn btn-primary btn-lg btn-block">Update Link! (It will be added below to click)</button>
+  </div>
+</div>
+
+<br><br><br>
+
+<div class="col">
+  <div class="col-xs-12 text-center">
+    <a href="#" id="link"></a>
+  </div>
+</div>
+
+<script>
+function addQueryStringLink() {
+  const url = "<%= url %>";
+  if (url) {
+    const link = document.getElementById('link');
+
+    link.href = url;
+    link.innerText = url;
+  }
+
+  return true;
+}
+
+addQueryStringLink();
+
+function updateLink() {
+  const link = document.getElementById('link');
+
+  link.href = document.getElementById('newLink').value;
+  link.innerText = document.getElementById('newLink').value;
+
+  return true;
+}
+</script>
+
+<style>
+#newLink {
+
+}
+</style>
